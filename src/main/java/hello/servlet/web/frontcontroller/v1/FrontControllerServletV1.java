@@ -14,11 +14,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 @WebServlet(name = "frontControllerV1", urlPatterns = "/front-controller/v1/*")
-public class FrontControllerV1 extends HttpServlet {
+public class FrontControllerServletV1 extends HttpServlet {
 
     private Map<String, ControllerV1> controllerMap = new HashMap<>();
 
-    public FrontControllerV1() {
+    public FrontControllerServletV1() {
         controllerMap.put("/front-controller/v1/members/new-form", new MemberFormControllerV1());
         controllerMap.put("/front-controller/v1/members/save", new MemberSaveControllerV1());
         controllerMap.put("/front-controller/v1/members", new MemberListControllerV1());
